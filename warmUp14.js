@@ -20,4 +20,46 @@ Explanation: In this case, no transaction is done, i.e. max profit = 0.
 
 var maxProfit = function(prices) {
   // YOUR CODE HERE
+  var weeklyPrice = {};
+	weeklyPrice.mon = prices[0];
+	weeklyPrice.tus = prices[1];
+	weeklyPrice.wen = prices[2];
+	weeklyPrice.thu = prices[3];
+	weeklyPrice.fri = prices[4];
+	weeklyPrice.sat = prices[5];
+
+	return weeklyPrice;
 };
+
+function maxPrice(prices){
+	var max = 0;
+	
+	for(var i = 0; i < prices.length; i++){
+		if(prices[i] > max){
+			max = prices[i];
+		}
+	}
+	return max;
+}
+
+
+
+
+
+
+
+
+
+/*
+function weeklyPrice(prices){
+	var max = 0;
+	var min = 0;
+	
+	for(var i = 0; i < prices.length; i++){
+		if(prices[i] > max){
+			max = prices[i];
+		}
+	}
+	return max;
+}
+*/
